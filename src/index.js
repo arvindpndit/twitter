@@ -22,12 +22,12 @@ app.listen(3000, async () => {
     // });
     // console.log(tweet);
     const tweetRepo = new TweetRepository();
-    // const tweet = await tweetRepo.create({
-    //     content: "this is the updated newwwww  : true",
-    //     userEmail: "a@book.com",
-    // });
-    // tweet.comments.push({ content: "first comment" });
-    // await tweet.save();
-    const tweet = await tweetRepo.getAll(2, 4);
-    console.log(tweet[0].ContentWithEmail);
+    const tweet = await tweetRepo.create({
+        content: "this is tweet 11",
+        userEmail: "a@book.com",
+    });
+    tweet.comments.push({ content: "first comment" });
+    await tweet.save();
+    // const tweet = await tweetRepo.getAll(2, 4);
+    // console.log(tweet[0].ContentWithEmail);
 });
