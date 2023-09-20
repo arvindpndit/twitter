@@ -1,9 +1,18 @@
-import Like from "../models/like";
-import { CrudRepository } from "./index.js";
+import Like from "../models/like.js";
+import CrudRepository from "./crud-repository.js";
 
 class LikeRepository extends CrudRepository {
     constructor() {
         super(Like);
+    }
+
+    async findByUserAndLikable(data) {
+        try {
+            const like = await Like.findOne(data);
+            return like;
+        } catch (error) {
+            throw error;
+        }
     }
 }
 
