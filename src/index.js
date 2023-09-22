@@ -31,7 +31,7 @@ app.listen(3000, async () => {
     console.log(tweets);
 
     const user = await userRepo.create({
-        email: "arvind@admin.com",
+        email: "arvind@admin7.com",
         password: "12345678",
         name: "Arvind",
     });
