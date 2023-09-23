@@ -40,6 +40,11 @@ class TweetService {
             console.log("Something went wrong in service layer");
         }
     }
+
+    async get(tweetId) {
+        const tweet = await this.tweetRepository.getWithComments(tweetId);
+        return tweet;
+    }
 }
 
 export default TweetService;
