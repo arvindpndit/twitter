@@ -28,14 +28,14 @@ app.listen(3000, async () => {
     const tweetRepo = new TweetRepository();
 
     const tweets = await tweetRepo.getAll(0, 10);
-    console.log(tweets);
+    //console.log(tweets);
 
-    const user = await userRepo.create({
-        email: "arvind@admin7.com",
-        password: "12345678",
-        name: "Arvind",
-    });
+    // const user = await userRepo.create({
+    //     email: "arvind@admin7.com",
+    //     password: "12345678",
+    //     name: "Arvind",
+    // });
 
-    const likeService = new LikeService();
-    likeService.toggleLike(tweets[0].id, "Tweet", user.id);
+    // const likeService = new LikeService();
+    // likeService.toggleLike(tweets[0].id, "Tweet", user.id);
 });
